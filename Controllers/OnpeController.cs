@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Data;
 
 namespace webOnpe_webForms.Controllers
 {
@@ -9,7 +9,8 @@ namespace webOnpe_webForms.Controllers
         internal object getActaByNumero(string nroMesa)
         {
             db.Sentencia(string.Format("usp_getGrupoVotacion '{0}'", nroMesa));
-            return db.getDataTable();
+            DataTable dt = db.getDataTable();
+            return dt.Rows.Count == 0 ? null : dt;
         }
     }
 }

@@ -13,7 +13,8 @@ namespace webOnpe_webForms.Pages
         {
             fvActa.DataSource = new Controllers.OnpeController().getActaByNumero(nroMesa.Text);
             fvActa.DataBind();
-            fvActa.Visible = true;
+            fvActa.Visible = fvActa.DataSource != null;
+            lblMensaje.Visible = !fvActa.Visible;
         }
     }
 }

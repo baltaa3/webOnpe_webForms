@@ -71,7 +71,7 @@
               </div>
               
               <div class="col-xs-12 td34up">
-                <form id="frmBuscar" name="frmBuscar" action="" method="post" class="horizontal-form">
+               <!-- <form id="frmBuscar" name="frmBuscar" action="" method="post" class="horizontal-form"> -->
                 
                   <div class="row">
                     
